@@ -39,7 +39,7 @@ app.get('/swagger.json', function(req, res) {
             }
             // combines definitions
             for (var k in i.definitions){
-                a.definitions[bbb + k] = i.definitions[k];
+                a.definitions[k] = i.definitions[k];
             }
             return a;
         }, false);
