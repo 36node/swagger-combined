@@ -1,28 +1,53 @@
 {
-    "list_url": [{
-        "docs": "http://api.dev.36node.com/bdp/pumper/v1/swagger.json",
-        "base_path": "http://api.dev.36node.com/bdp/pumper/v1",
-        "route_match": ["/bdp/pumper*"]
-    }, {
-        "docs": "http://api.dev.36node.com/bdp/datalake/v1/v2/api-docs?group=datalake",
-        "base_path": "http://api.dev.36node.com/bdp/datalake/v1",
-        "route_match": ["/bdp/datalake*"]
-    }, {
-        "docs": "http://api.dev.36node.com/bdp/transformer/v1/swagger.json",
-        "base_path": "http://api.dev.36node.com/bdp/transformer/v1",
-        "route_match": ["/bdp/transformer*"]
-    }, {
-        "docs": "http://api.dev.36node.com/bdp/spark-engine/v1/swagger.json",
-        "base_path": "http://api.dev.36node.com/bdp/spark-engine/v1",
-        "route_match": ["/bdp/spark-engine*"]
-    }],
-    "info": {
-        "description": "大数据平台，提供数据源导入，数据变换和数据可视化等服务，支持spark & sql脚本自定义pipeline。API暂时没有权限限制，请谨慎调用。",
-        "title": "大数据平台API",
-        "version": "1.0 - DEVELOPMENT",
-        "contact": {
-            "email": "zzswang@gmail.com"
-        }
+  "list_url": [
+    {
+      "docs": "http://api.dev.36node.com/bdp/pumper/v1/swagger.json",
+      "base_path": "http://api.dev.36node.com/bdp/pumper/v1",
+      "route_match": [
+        "/bdp/pumper*"
+      ]
     },
-    "port": 3000
+    {
+      "docs": "http://api.dev.36node.com/bdp/datalake/v1/v2/api-docs?group=datalake",
+      "base_path": "http://api.dev.36node.com/bdp/datalake/v1",
+      "route_match": [
+        "/bdp/datalake*"
+      ]
+    },
+    {
+      "docs": "http://api.dev.36node.com/bdp/transformer/v1/swagger.json",
+      "base_path": "http://api.dev.36node.com/bdp/transformer/v1",
+      "route_match": [
+        "/bdp/transformer*"
+      ]
+    },
+    {
+      "docs": "http://api.dev.36node.com/bdp/spark-engine/v1/swagger.json",
+      "base_path": "http://api.dev.36node.com/bdp/spark-engine/v1",
+      "route_match": [
+        "/bdp/spark-engine*"
+      ]
+    }
+  ],
+  "info": {
+    "description": "大数据平台，提供数据源导入，数据变换和数据可视化等服务，支持spark & sql脚本自定义pipeline。API暂时没有权限限制，请谨慎调用。",
+    "title": "大数据平台API",
+    "version": "1.0 - DEVELOPMENT",
+    "contact": {
+      "email": "zzswang@gmail.com"
+    }
+  },
+  "securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization"
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ],
+  "port": 3000
 }
