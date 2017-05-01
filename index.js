@@ -20,6 +20,8 @@ var listUrl = config.get("list_url");
 
 // general infor of your application
 var info = config.get("info");
+var securityDefinitions = config.get("securityDefinitions");
+var security = config.get("security");
 app.get('/swagger.json', function(req, res) {
     var schemes = [ req.protocol ];
     if (config.has('schemes')) {
@@ -47,6 +49,8 @@ app.get('/swagger.json', function(req, res) {
         ret.host = 'api.dev.36node.com';
         ret.basePath = '/';
         ret.schemes = schemes;
+        ret.securityDefinitions = securityDefinitions;
+        ret.security = security;
         res.setHeader('Content-Type', 'application/json');
         res.send(JSON.stringify(ret));
     });
