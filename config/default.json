@@ -8,7 +8,7 @@
       ]
     },
     {
-      "docs": "http://api.dev.36node.com/bdp/datalake/v1/v2/api-docs?group=datalake",
+      "docs": "http://api.dev.36node.com/bdp/datalake/v1/swagger",
       "base_path": "http://api.dev.36node.com/bdp/datalake/v1",
       "route_match": [
         "/bdp/datalake*"
